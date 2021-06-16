@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>mang</title>
+  <style>
+    body {padding-top:50px}
+  </style>
+</head>
+<body>
+<input type="text" id="Nhap">
+<button type="button" onclick="addData()">Add</button>
+<button type="button" onclick="Display()">Display</button>
+<p id="hienthi"></p>
+<script>
+  let mang = [23,12,25];
+  function addData(){
+    let DoDMang = mang.length;
+       mang[DoDMang]  = parseInt(document.getElementById("Nhap").value);
+       document.getElementById("Nhap").value="";
+  }
+  function Display() {
+    let display = "";
+    for (let i = 0; i < mang.length; i++) {
+       display = display + "<p> Elements"+ i + "=" + mang[i] + "</p>" ;
+    }
+       document.getElementById("hienthi").innerHTML= display;
+  }
+
+</script>
+</body>
+</html>
