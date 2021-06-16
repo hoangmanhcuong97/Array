@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tim gia tri trong mang</title>
+</head>
+<body>
+<script>
+  let value = +prompt("Enter a number");
+  let number =[-1,2,5,6,7,8,9,10,0];
+  check = false;
+  let vitri;
+  for (let i=0; i < number.length;i++) {
+    if (value == number[i]) {
+      check = true;
+      vitri =i;
+    }
+  }
+  if (check) {
+    alert("gia tri" + number[vitri] + "vi tri thu"+ vitri);
+  }
+  else{
+    alert("Gia tri nhap vao khong bang voi gia tri mang");
+  }
+</script>
+</body>
+</html>
