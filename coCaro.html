@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Co caro</title>
+</head>
+<body>
+<!--Tao giao dien su dung-->
+<h3>Bang co caro</h3>
+<p id="carogame"></p>
+
+<script>
+//Tao hinh thai
+        let b= document.getElementById("carogame");
+        let a=[];
+        let data="";
+        for (let i=0;i<5;i++){
+          a[i]= [0,0,0,0,0];
+        }
+        // for(let i=0;i<5;i++) {
+        //   document.write(a[i].join("&nbsp;&nbsp;&nbsp;&nbsp;") + "<br>")
+        // }
+            for (let i = 0; i < 5; i++) {
+              data += "<br/>";
+              for (let j = 0; j < 5; j++) {
+                data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+              }
+
+            }
+            data += "<br/><br/><input type='button' value='Change Value' onclick='sukien()'>";
+            b.innerHTML = data;
+           function sukien() {
+             let positionX = prompt("X: ");
+             let positionY = prompt("Y: ");
+             a[positionX][positionY] = "x";
+             data = "";
+             for (let i = 0; i < 5; i++) {
+               data += "<br/>";
+               for (let j = 0; j < 5; j++) {
+                 data += a[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+               }
+               b.innerHTML = "<hr/>" + data;
+               // data += "<br/><br/><input type='button' value='Change Value' onclick='sukien()'>";
+             }
+
+           }
+
+</script>
+
+</body>
+</html>
